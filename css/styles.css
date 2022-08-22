@@ -63,8 +63,44 @@ a {
 }
 
 
-.blocknav .item + .item{
+.itemnav + .itemnav{
   margin-left: 50px;
+}
+.itemnav{
+  position: relative;
+}
+.itemnav::after  {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+
+  transform: scaleX(0);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.itemnav:hover::after{
+  transform: scaleX(1);
+}
+.current a{
+  color: var(--accent-color);
+}
+.current::after{
+  content: '';
+  
+  transform: scaleX(1);
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+
 }
 
 .navlink{
@@ -126,6 +162,7 @@ a {
 }
 .current{
   color: var(--accent-color);
+
 }
 /* Firts section title */
 .hero{
@@ -171,6 +208,52 @@ a {
   border-radius: 4px;
   text-align: center;
   border: 0px solid black;
+}
+
+.backprop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backprop.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+.backprop.is-hidden .modal{
+  transform: translate(-50%, -50%) scale(1.1);
+}
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  min-width: 528px;
+  min-height: 581px;
+
+
+  background: var(--primary-white-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.modal button{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 8px;
+  right: 8px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  cursor: pointer;
 }
 /* section priority */
 
@@ -218,7 +301,22 @@ a {
   display: flex;
 }
 .sectionemploymentul .item{
+  position: relative;
   margin-right: 30px;
+}
+.sectionemploymentul .item h3{
+  position: absolute;
+  padding: 27px 113px;
+  bottom: 0px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: var(--primary-white-color);
+  background: rgba(47, 48, 58, 0.8);
 }
 .sectionemploymentul .item:last-child{
   margin-right: 0px;
@@ -454,6 +552,35 @@ a {
   background: var(--accent-color);
 }
 /* exampales */
+
+.overlay-exampales{
+  position: relative;
+}
+.overlay-exampales p{
+  position: absolute;
+
+  display: block;
+  width: 100%;
+  height: 105%;
+  top: 0px;
+  left: 0;
+  padding: 63px 24px;
+
+  background: rgba(33, 150, 243, 0.9);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+
+  color: var(--primary-white-color);
+  transform: translateY(135%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.ulexampales .item:hover
+.overlay-exampales p{
+  transform: translateY(-10%);
+}
+
 .headerborderbottom{
   border-bottom: 1px solid #ECECEC;;
 }
@@ -461,6 +588,9 @@ a {
 .ulexampales{
   display: flex;
   flex-wrap: wrap;
+}
+.ulexampales .item .overlay-exampales{
+  overflow: hidden;
 }
 .ulexampales .item{
   margin-right: 30px;
@@ -479,8 +609,11 @@ a {
   margin-bottom: 0px;
 }
 
-.ulexampales h2,
-.ulexampales p{
+.ulexampales h2{
+  font-size: 14px;
+  line-height: 1.71;
+}
+.blockcardpatagraf{
   font-size: 14px;
   line-height: 1.71;
 }

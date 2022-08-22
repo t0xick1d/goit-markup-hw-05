@@ -17,9 +17,9 @@
       <nav class="navbarcontainer">
         <a href="./index.html" class="logo"><span class="accentlogo">Web</span>Studio</a>
         <ul class="blocknav">
-          <li class="item"><a class="navlink current" href="">Студія</a></li>
-          <li class="item"><a class="navlink" href="./portfolio.html">Портфоліо</a></li>
-          <li class="item"><a class="navlink" href="">Контакти</a></li>
+          <li class="current itemnav "><a class="navlink " href="">Студія</a></li>
+          <li class="itemnav"><a class="navlink" href="./portfolio.html">Портфоліо</a></li>
+          <li class="itemnav"><a class="navlink" href="">Контакти</a></li>
         </ul>
       </nav>
       <ul class="contacts">
@@ -47,7 +47,12 @@
       <div class="container">
         <div class="mainsection">
           <h1 class="maintitle">Ефективні рішення для <br/>вашого бізнесу</h1>
-          <button type="button" class="button">Замовити послугу</button>
+          <button type="button" class="button" data-modal-open>Замовити послугу</button>
+          <div class="backprop is-hidden" data-modal>
+            <div class="modal">
+              <button data-modal-close></button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -90,9 +95,18 @@
       <div class="container">
         <h2 >Чим ми займаємося</h2>
         <ul class="sectionemploymentul">
-          <li class="item"><img src="./img/employment/box1.png" alt="Програмування за столом" width="370"></li>
-          <li class="item"><img src="./img/employment/box2.png" alt="Розробка мобільного дизайну" width="370"></li>
-          <li class="item"><img src="./img/employment/box3.png" alt="Вибір кольору на планшеті" width="370"></li>
+          <li class="item">
+            <img src="./img/employment/box1.png" alt="Програмування за столом" width="370">
+            <h3>Десктопні додатки</h3>
+          </li>
+          <li class="item">
+            <img src="./img/employment/box2.png" alt="Розробка мобільного дизайну" width="370">
+            <h3>Мобільні додатки</h3>
+          </li>
+          <li class="item">
+            <img src="./img/employment/box3.png" alt="Вибір кольору на планшеті" width="370">
+            <h3>Дизайнерські рішення</h3>
+          </li>
         </ul>
       </div>
     </section>
@@ -341,4 +355,5 @@
     </div>
   </footer>
 </body>
+<script src="./js/modal.js"></script>
 </html>

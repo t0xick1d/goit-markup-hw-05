@@ -255,6 +255,11 @@ a {
   border-radius: 50%;
   cursor: pointer;
 }
+.modal button svg{
+  fill: #000000;
+  width: 11px;
+  height: 11px;
+}
 /* section priority */
 
 .priority ul{

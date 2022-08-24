@@ -136,6 +136,8 @@ a {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
+  color: var(--text-silver-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-envelope{
   fill: var(--text-silver-color);
@@ -246,6 +248,9 @@ a {
 }
 .modal button{
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 30px;
   height: 30px;
   top: 8px;
@@ -311,13 +316,17 @@ a {
 }
 .sectionemploymentul .item h3{
   position: absolute;
-  padding: 27px 113px;
+
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   bottom: 0px;
 
   font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
-  text-align: center;
+  line-height: 1.14;
   text-transform: uppercase;
 
   color: var(--primary-white-color);
@@ -381,7 +390,9 @@ a {
   justify-content: center;
   width: 44px;
   height: 44px;
+  border-radius: 50%;
   fill: rgba(175, 177, 184, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* fill="#afb1b8" style="fill:var(--color1, #afb1b8)" */
 .link-team-icon:last-child{
@@ -390,15 +401,12 @@ a {
 .team-icon svg{
   width: 20px;
   height: 20px;
-  
 }
 .team-icon:hover{
-  border-radius: 50%;
   background-color: var(--accent-color);
-}
-.team-icon:hover{
   fill: var(--bg-color-button);
 }
+
 /* section clients */
 .clients h2{
   text-align: center;
@@ -411,6 +419,7 @@ a {
   margin-right: 30px;
   border: 1px solid #AFB1B8;
   border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .li-client-icon a{
   display: flex;
@@ -421,6 +430,7 @@ a {
 }
 .client-icon{
   fill: rgba(175, 177, 184, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-icon svg{
   width: 106px;
@@ -467,6 +477,7 @@ a {
 }
 .address{
   color: var(--primary-white-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-footer{
   margin-left: 70px;
@@ -498,7 +509,9 @@ a {
   height: 44px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
+  transition: background 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .li-footer-icon:hover{
   background: var(--accent-color);
 }
@@ -509,6 +522,9 @@ a {
   width: 20px;
   height: 20px;
   
+}
+.emailnumber{
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address:hover,
@@ -548,11 +564,12 @@ a {
   text-align: center;
   border-radius: 4px;
   border: #FFFFFF;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   }
 .filterbutton button:hover,
 .filterbutton button:focus{
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
   color: var(--primary-white-color);
   background: var(--accent-color);
 }
@@ -574,7 +591,7 @@ a {
   background: rgba(33, 150, 243, 0.9);
   font-weight: 400;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 1.55;
 
   color: var(--primary-white-color);
   transform: translateY(135%);
@@ -600,6 +617,7 @@ a {
 .ulexampales .item{
   margin-right: 30px;
   margin-bottom: 30px; 
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .ulexampales .item:hover{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
